@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Context\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Config\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+</Project>
