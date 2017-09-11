@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ionit.receitas.core.interfaces;
+using ionit.receitas.core.repositories;
+using ionit.receitas.core.UnitOfWork;
 
 namespace ionit_receitas
 {
@@ -27,7 +30,7 @@ namespace ionit_receitas
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             // Add framework services.
             services.AddMvc();

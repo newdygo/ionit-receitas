@@ -7,7 +7,7 @@
     /// <summary>
     /// Provides a mechanism for manage the repositories resources base.
     /// </summary>
-    public abstract class RepositoryBase<TEntity> : IRepository<TEntity> where TEntity : class
+    public abstract class RepositoryBase<TEntity> : IUnitOfWork<TEntity> where TEntity : class
     {
         #region Properties
 

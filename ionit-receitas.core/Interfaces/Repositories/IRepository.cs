@@ -6,7 +6,7 @@
     /// Provides a generic repository.
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IUnitOfWork<TEntity> where TEntity : class
     {
         #region Properties
 

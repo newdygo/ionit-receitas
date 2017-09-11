@@ -1,7 +1,6 @@
 ﻿namespace ionit.receitas.core.repositories
 {
     using ionit.receitas.core.Entities;
-    using ionit.receitas.core.repositories;
     using Microsoft.EntityFrameworkCore;
     using System.Collections.Generic;
 

@@ -1,7 +1,5 @@
 ﻿namespace ionit.receitas.core.Entities
 {
-    using System;
-
     /// <summary>
     /// Defines the invoice model.
     /// </summary>
@@ -12,7 +10,12 @@
         /// <summary>
         /// Gets or sets the id.
         /// </summary>
-        public Int32 Id { get; set; }
+        public int Id { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the Titulo.
+        /// </summary>
+        public string Titulo { get; set; }
         
         #endregion
     }
