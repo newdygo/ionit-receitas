@@ -20,9 +20,30 @@ namespace ionit_receitas.Controllers
         // GET: Receita
         public ActionResult Index()
         {
-            var receitas = UnitOfWork.Receita;
+            return View(UnitOfWork.Receita.Entities.ToList());
+        }
 
+        // GET: fff/Create
+        public ActionResult Create()
+        {
             return View();
+        }
+
+        // POST: fff/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(IFormCollection collection)
+        {
+            try
+            {
+                // TODO: Add insert logic here
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }
