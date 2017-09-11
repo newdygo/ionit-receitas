@@ -1,7 +1,9 @@
 ﻿namespace ionit.receitas.core.Context
 {
+    using ionit.receitas.core.Config;
     using ionit.receitas.core.Entities;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Options;
 
     /// <summary>
     /// A mailgun context to access the database.
@@ -15,6 +17,24 @@
         /// </summary>
         public DbSet<Receita> Receita { get; set; }
 
+        /// <summary>
+        /// Sets the current option.
+        /// </summary>
+        public AppOption Option { get; private set; }
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Initializes the context of database.
+        /// </summary>
+        /// <param name="option">The option.</param>
+        public ReceitaContext(IOptions<AppOption> option)
+        {
+            Option = option.Value;
+        }
+
         #endregion
 
         #region Methods
@@ -27,7 +47,7 @@
         /// <param name="optionsBuilder">A builder used to create or modify options for this context.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(optionsBuilder.Options. Tenant.ConnectionString);
+            optionsBuilder.UseSqlServer(Option.ConnectionString);
 
             base.OnConfiguring(optionsBuilder);
         }
