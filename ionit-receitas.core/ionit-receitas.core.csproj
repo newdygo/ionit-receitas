@@ -7,9 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Services\" />
-    <Folder Include="Dto\" />
-    <Folder Include="Services\" />
+    <Compile Remove="Dto\**" />
+    <Compile Remove="Interfaces\Services\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Dto\**" />
+    <EmbeddedResource Remove="Interfaces\Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Dto\**" />
+    <None Remove="Interfaces\Services\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
   <ItemGroup>
