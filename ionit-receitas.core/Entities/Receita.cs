@@ -16,7 +16,10 @@
         /// Gets or sets the Titulo.
         /// </summary>
         public string Titulo { get; set; }
-        
+        public string Ingredientes { get; set; }
+        public string ModoPreparo { get; set; }
+        public string TempoPreparo { get; set; }
+
         #endregion
     }
 }
