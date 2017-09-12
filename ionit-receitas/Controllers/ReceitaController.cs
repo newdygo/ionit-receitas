@@ -36,7 +36,7 @@ namespace ionit_receitas.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
+                //UnitOfWork.Receita.Create();
 
                 return RedirectToAction(nameof(Index));
             }

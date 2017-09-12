@@ -22,6 +22,16 @@
             }
         }
 
+        /// <summary>
+        /// Inclusão
+        /// </summary>
+        /// <param name="entity"></param>
+        public override void Create(Receita entity)
+        {
+            Context.Add(entity);
+            Context.SaveChanges();
+        }
+
         #endregion
 
         #region Constructors
@@ -33,6 +43,8 @@
         public RepositoryReceita(DbContext context) : base(context)
         {
         }
+
+        
 
         #endregion
     }

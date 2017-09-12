@@ -21,6 +21,12 @@
         /// </summary>
         public abstract IEnumerable<TEntity> Entities { get; }
 
+        /// <summary>
+        /// Inclusão
+        /// </summary>
+        /// <param name="entity"></param>
+        public abstract void Create(TEntity entity);
+
         #endregion
 
         #region Constructors

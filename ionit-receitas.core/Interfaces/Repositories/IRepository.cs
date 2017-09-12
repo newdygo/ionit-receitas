@@ -15,6 +15,12 @@
         /// </summary>
         IEnumerable<TEntity> Entities { get; }
 
+        /// <summary>
+        /// Inclusão
+        /// </summary>
+        /// <param name="entity"></param>
+        void Create(TEntity entity);
+
         #endregion
     }
 }
