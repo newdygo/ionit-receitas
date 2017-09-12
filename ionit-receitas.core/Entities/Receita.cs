@@ -1,4 +1,6 @@
-﻿namespace ionit.receitas.core.Entities
+﻿using System.Collections.Generic;
+
+namespace ionit.receitas.core.Entities
 {
     /// <summary>
     /// Defines the invoice model.
@@ -16,7 +18,7 @@
         /// Gets or sets the Titulo.
         /// </summary>
         public string Titulo { get; set; }
-        public string Ingredientes { get; set; }
+        public List<Ingredientes> Ingredientes { get; set; }
         public string ModoPreparo { get; set; }
         public string TempoPreparo { get; set; }
 
