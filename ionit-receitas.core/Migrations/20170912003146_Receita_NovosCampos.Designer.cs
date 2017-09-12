@@ -8,9 +8,10 @@ using ionit.receitas.core.Context;
 namespace ionit.receitas.core.Migrations
 {
     [DbContext(typeof(ReceitaContext))]
-    partial class ReceitaContextModelSnapshot : ModelSnapshot
+    [Migration("20170912003146_Receita_NovosCampos")]
+    partial class Receita_NovosCampos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
