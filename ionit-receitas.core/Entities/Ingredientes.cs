@@ -6,6 +6,7 @@ namespace ionit.receitas.core.Entities
 {
     public class Ingredientes
     {
+        public int Id { get; set; }
         public int idReceita { get; set; }
         public string Nome { get; set; }
         public string UnidadeMedida { get; set; }

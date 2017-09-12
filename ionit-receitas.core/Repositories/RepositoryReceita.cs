@@ -32,6 +32,11 @@
             Context.SaveChanges();
         }
 
+        public override IEnumerable<Receita> List()
+        {
+            return Context.Set<Receita>();
+        }
+
         #endregion
 
         #region Constructors

@@ -21,6 +21,7 @@
         /// <param name="entity"></param>
         void Create(TEntity entity);
 
+        IEnumerable<TEntity> List();
         #endregion
     }
 }

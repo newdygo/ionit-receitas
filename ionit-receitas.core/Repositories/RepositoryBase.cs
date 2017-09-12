@@ -27,6 +27,8 @@
         /// <param name="entity"></param>
         public abstract void Create(TEntity entity);
 
+        public abstract IEnumerable<TEntity> List();
+
         #endregion
 
         #region Constructors

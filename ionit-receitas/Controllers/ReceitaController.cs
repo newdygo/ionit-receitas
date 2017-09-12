@@ -32,11 +32,11 @@ namespace ionit_receitas.Controllers
         // POST: fff/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(ionit.receitas.core.Entities.Receita entidade)
         {
             try
             {
-                //UnitOfWork.Receita.Create();
+                UnitOfWork.Receita.Create(entidade);
 
                 return RedirectToAction(nameof(Index));
             }
